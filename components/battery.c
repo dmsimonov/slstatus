@@ -50,8 +50,8 @@
 			char *state;
 			char *symbol;
 		} map[] = {
-			{ "Charging",    "+" },
-			{ "Discharging", "-" },
+			{ "Charging",    "\uf583" },
+			{ "Discharging", "\uf582" },
 		};
 		size_t i;
 		char path[PATH_MAX], state[12];
@@ -69,7 +69,7 @@
 				break;
 			}
 		}
-		return (i == LEN(map)) ? "?" : map[i].symbol;
+		return (i == LEN(map)) ? "\ufba3" : map[i].symbol;
 	}
 
 	const char *

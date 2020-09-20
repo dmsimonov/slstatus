@@ -63,10 +63,11 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ keymap,        " %s | ",          ""               },
-	{ wifi_perc,     "\uf1eb : %s | ",  "wlp3s0f0u7"},
-	/*{ wifi_perc,     " \uf1eb : %s | ", "wlp2s0"},
-	{ battery_state, "%s: ",	    "BAT1"},
-	{ battery_perc,  "%s%% | ",         "BAT1"  },*/
-	{ datetime,      "\uf5ef : %s ",    "%H:%M %d.%m.%Y" },
+	{ keymap,        " %s  ",          ""               },
+	{ wifi_perc,     "\ufaa8 %s%%  ",  "wlp3s0f0u7"},
+	{ run_command,   "\uf028 %s%%  ",        "amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1" },
+	/*{ wifi_perc,     "\uf1eb %s  ", "wlp2s0"},
+	{ battery_state, "%s ",	    "BAT1"},
+	{ battery_perc,  "%s%%  ",         "BAT1"  },*/
+	{ datetime,      "\uf017 %s  ",    "%H:%M  \uf5f5 %b %d" },
 };
